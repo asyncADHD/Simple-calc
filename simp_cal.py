@@ -1,6 +1,6 @@
 from tkinter import Button, Entry, Tk, mainloop
 from tkinter.constants import END, INSERT
-import math
+
 
 root = Tk()
 root.title("simple calclator")
@@ -23,6 +23,8 @@ def button_clear():
 def button_addition():
     first_num = e.get()
     global f_num 
+    global math
+    math = "addition"
     f_num = int(first_num)
     e.delete(0, END)
 
@@ -30,16 +32,45 @@ def button_addition():
 def button_equal ():
     second_number = e.get()
     e.delete(0, END)
-    e.insert(0, f_num + int(second_number))
+
+    if math == "addition":
+        e.insert(0, f_num + int(second_number))
+
+    if math == "divide":
+        e.insert(0, f_num / float(second_number))
+
+    if math == "multiply":
+        e.insert(0, f_num * int(second_number))
+
+    if math == "subtract":
+        e.insert(0, f_num - int(second_number))
 
 def button_subtract():
-    return
+    first_num = e.get()
+    global f_num 
+    global math
+    math = "subtract"
+    f_num = int(first_num)
+    e.delete(0, END)
+
 
 def button_divide():
-    return
+    first_num = e.get()
+    global f_num 
+    global math
+    math = "divide"
+    f_num = int(first_num)
+    e.delete(0, END)
+
 
 def button_multiply():
-    return
+    first_num = e.get()
+    global f_num 
+    global math
+    math = "multiply"
+    f_num = int(first_num)
+    e.delete(0, END)
+
 
 
 
