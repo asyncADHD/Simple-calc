@@ -45,7 +45,7 @@ button_8 = Button(root, text="8", padx=40, pady=20, command=lambda:button_click(
 button_9 = Button(root, text="9", padx=40, pady=20, command=lambda:button_click(9))
 button_0 = Button(root, text="0", padx=40, pady=20, command=lambda:button_click(0))
 button_addition = Button(root, text="+", padx=39, pady=20, command=button_addition)
-button_equal = Button(root, text="=", padx=91, pady=20, command=lambda:button_click())
+button_equal = Button(root, text="=", padx=91, pady=20, command=button_equal)
 button_CE = Button(root, text="Clear", padx=79, pady=20, command=button_clear)
 
 
